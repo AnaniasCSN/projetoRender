@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Web com Banco de Dados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Gerenciador Persistente</h1>
+            <p>Dados salvos em Banco de Dados Relacional (SQLite)</p>
+        </header>
+
+        <section class="input-section">
+            <input type="text" id="taskInput" placeholder="Digite uma nova tarefa..." maxlength="80">
+            <button onclick="addTask()">Salvar no Banco</button>
+        </section>
+
+        <section class="list-section">
+            <ul id="taskList">
+                <!-- Itens carregados do banco serão renderizados aqui -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
